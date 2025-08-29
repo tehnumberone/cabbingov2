@@ -2,10 +2,10 @@ name: Deploy Angular App to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Change to 'master' if that's your default branch
+    branches: [ CabbageBingo ]
   pull_request:
-    branches: [ main ]
-    
+    branches: [ CabbageBingo ]
+
 permissions:
   contents: write
 
@@ -39,7 +39,7 @@ jobs:
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/CabbageBingo'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist/cabbingov2/browser
