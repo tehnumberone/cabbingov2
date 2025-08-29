@@ -2,12 +2,12 @@
 export const environment = {
     production: true,
     firebaseConfig: {
-        apiKey: "PLACEHOLDER_API_KEY",
-        authDomain: "PLACEHOLDER_AUTH_DOMAIN",
-        databaseURL: "PLACEHOLDER_DATABASE_URL",
-        projectId: "PLACEHOLDER_PROJECT_ID",
-        storageBucket: "PLACEHOLDER_STORAGE_BUCKET",
-        messagingSenderId: "PLACEHOLDER_MESSAGING_SENDER_ID",
-        appId: "PLACEHOLDER_APP_ID"
+        apiKey: process.env['NG_ENV_FIREBASE_API_KEY'],
+        authDomain: process.env['NG_ENV_FIREBASE_AUTH_DOMAIN'],
+        databaseURL: process.env['NG_ENV_FIREBASE_DATABASE_URL'],
+        projectId: process.env['NG_ENV_FIREBASE_PROJECT_ID'],
+        storageBucket: process.env['NG_ENV_FIREBASE_STORAGE_BUCKET'],
+        messagingSenderId: process.env['NG_ENV_FIREBASE_MESSAGING_SENDER_ID'],
+        appId: process.env['NG_ENV_FIREBASE_APP_ID']
     }
 };

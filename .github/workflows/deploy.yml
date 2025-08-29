@@ -26,9 +26,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Create production environment from template
-      run: cp src/app/environment.prod.template.ts src/app/environment.prod.ts
-      
     - name: Inject Firebase config into production environment
       run: node inject-env.js
       env:

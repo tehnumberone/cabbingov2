@@ -18,4 +18,3 @@ const envContent = `export const environment = {
 };`;
 
 fs.writeFileSync(envProdPath, envContent);
-console.log('Environment variables injected into environment.prod.ts');
