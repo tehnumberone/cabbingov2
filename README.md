@@ -2,6 +2,28 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
 
+## Setup Instructions
+
+### 1. Environment Configuration
+Copy the environment template files and add your Firebase configuration:
+
+```bash
+cp src/app/environment.template.ts src/app/environment.ts
+```
+
+Then edit `src/app/environment.ts` and replace the placeholder values with your actual Firebase config.
+
+### 2. GitHub Secrets (for deployment)
+Add these secrets to your GitHub repository (Settings → Secrets and variables → Actions):
+
+- `FIREBASE_API_KEY`
+- `FIREBASE_AUTH_DOMAIN` 
+- `FIREBASE_DATABASE_URL`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_STORAGE_BUCKET`
+- `FIREBASE_MESSAGING_SENDER_ID`
+- `FIREBASE_APP_ID`
+
 ## Development server
 
 To start a local development server, run:
