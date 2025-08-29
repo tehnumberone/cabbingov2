@@ -38,7 +38,9 @@ jobs:
         NG_APP_FIREBASE_APP_ID: ${{ secrets.NG_APP_FIREBASE_APP_ID }}
 
     - name: Build Angular app
-      run: npm run build -- --base-href="/cabbingov2/"
+      run: | 
+      echo "API_KEY=${{ secrets.NG_APP_FIREBASE_API_KEY }}" >> $GITHUB_ENV
+      npm run build -- --configuration=production --base-href="/cabbingov2/" 
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
